@@ -6,7 +6,6 @@
 
 void decodificador(char codigo[100], int b)
 {
-
     char aux[3];
     int traducao[50];
 
@@ -34,4 +33,5 @@ void decodificador(char codigo[100], int b)
             printf("%c", traducao[i]);
         }
     }
+    printf("\n");
 }
