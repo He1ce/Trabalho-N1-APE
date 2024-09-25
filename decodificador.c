@@ -10,20 +10,28 @@ void decodificador(char codigo[100], int b)
     char aux[3];
     int traducao[50];
 
-    for(int i = 0; i < 99; i+=2)
+    for (int i = 0; i < 99; i += 2)
     {
         aux[0] = codigo[i];
-        aux[1] = codigo[i+1];
+        aux[1] = codigo[i + 1];
         aux[2] = '\0';
 
         traducao[i/2] = strtol(aux, NULL, 16);
     }
 
-    for(int i = 0; i < 50; i++)
+    for (int i = 0; i < 50; i++)
     {
-        if(traducao[i] != 0 && func_val(i, b) != 0)
+        if(traducao[i] == 0)
         {
-             printf("%c", traducao);
+            break;
+        }
+        else if(func_val(i+1,b) == 0)
+        {
+            continue;
+        }
+        else
+        {
+            printf("%c", traducao[i]);
         }
     }
 }

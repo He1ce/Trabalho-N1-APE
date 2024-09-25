@@ -19,10 +19,9 @@ int main()
         scanf("%d", &pos);
         printf("Insira o valor de B: ");
         scanf("%d", &b);
-
     }
 
-    printf("%d\n", func_val(pos,b));
+    printf("Valor func_val: %d\n", func_val(pos,b));
 
     decodificador(teste, b);
 
