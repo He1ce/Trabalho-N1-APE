@@ -4,12 +4,12 @@
 #include "decodificador.h"
 #include "func_val.h"
 
-void decodificador(char codigo[100], int b)
+void decodificador(char codigo[101], int b)
 {
     char aux[3];
-    int traducao[50];
+    int traducao[51];
 
-    for (int i = 0; i < 99; i += 2)
+    for (int i = 0; i < 100; i += 2)
     {
         aux[0] = codigo[i];
         aux[1] = codigo[i + 1];
@@ -18,7 +18,7 @@ void decodificador(char codigo[100], int b)
         traducao[i/2] = strtol(aux, NULL, 16);
     }
 
-    for (int i = 0; i < 50; i++)
+    for (int i = 0; i < 51; i++)
     {
         if(traducao[i] == 0)
         {
