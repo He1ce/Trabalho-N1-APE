@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include "decodificador.h"
+#include "decodificador.h" // Inclui a definição da função decodificador
 
 int main()
 {
@@ -11,7 +11,8 @@ int main()
 
     // Vetores para armazenar as mensagens e valores de b
     int b[qtd_mensagens];
-    char mensagens[qtd_mensagens][101];
+    char mensagens[qtd_mensagens][101]; // Armazena as mensagens interceptadas
+
 
     // Coleta dos dados
     for (int i = 0; i < qtd_mensagens; i++)
@@ -29,7 +30,7 @@ int main()
     // Processamento (decodificação) das mensagens
     for (int i = 0; i < qtd_mensagens; i++)
     {
-        decodificador(mensagens[i], b[i]);
+        decodificador(mensagens[i], b[i]); // Chama a função decodificador para cada mensagem
     }
 
     return 0;
