@@ -2,8 +2,9 @@
 #include <math.h>
 #include "func_val.h"
 
-int func_val(int x, int b) {
-
+int func_val(int x, int b) 
+{
+     // Coeficientes usados na equação
     double a0 = 186.752;
     double a1 = -148.235;
     double a2 = 34.5049;
@@ -13,6 +14,7 @@ int func_val(int x, int b) {
     double a6 = 0.0000735464;
     double a7 = -4.22038e-7;
 
+    // Retorna o valor arredondado da equção
     return round(a0 + (a1 + b) * x + a2 * pow(x, 2) + a3 * pow(x, 3) + a4 * pow(x, 4) + a5 * pow(x, 5) + a6 * pow(x, 6) + a7 * pow(x, 7));
 
 }
